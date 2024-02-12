@@ -1,18 +1,3 @@
-html,
-body {
-  position: relative;
-  height: 100%;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.container {
-  max-width: 1200px;
-  padding: 0px 15px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-}
-
 .backdrop {
   position: fixed;
   top: 0;
@@ -21,12 +6,22 @@ body {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
 
-  // opacity: 0;
+  opacity: 0;
   pointer-events: none;
-  // visibility: hidden;
 
   transition: opacity 250ms ease-in-out;
+}
 
+.modal-swiper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.backdrop.is-open {
+  opacity: 1;
+  pointer-events: all;
   z-index: 999;
 }
 
@@ -43,30 +38,72 @@ body {
 img {
   display: block;
   max-width: 100%;
+  cursor: pointer;
 }
 
 .swiper {
-  width: 80%;
-  height: 40%;
+  width: 100%;
+  height: 70%;
+}
+
+.swiper-wrapper {
+  display: flex;
+  gap: 5px;
 }
 
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: #fff;
+  background: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: auto;
 }
 
 .swiper-slide img {
   display: block;
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  height: 200px;
   object-fit: cover;
 }
 
 iframe {
   width: 100%;
   height: 100%;
+}
+
+.js-close-modal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: #ff3366;
+}
+
+.swiper-pagination .swiper-pagination-bullet {
+  background-color: #fff;
+  opacity: 1;
+}
+
+.modal-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: transparent;
+  outline: none;
+  border: none;
+
+  cursor: pointer;
+}
+
+.icon {
+  fill: #fff;
+
+  &:hover {
+    fill: #ff3366;
+  }
 }

@@ -1,17 +1,15 @@
 const swiperWrapper = document.querySelector('.swiper-wrapper');
 
-export const createSliderMarkup = videos => {
-  const videoMarkup = videos
+export const createSliderMarkup = movies => {
+  const videoMarkup = movies
     .map(video => {
       return `<div class="swiper-slide">
-  <a href="${video.pictures.base_link}">
-    <img src="${video.pictures.base_link}"  alt="" title="" />
-  </a>
+  
+    <img src="${video.pictures.base_link}" data-uri="${video.uri}" class="gallery-video" alt="${video.name}" />
+ 
 </div>`;
     })
     .join('');
-
-  console.log(videoMarkup);
 
   swiperWrapper.insertAdjacentHTML('beforeend', videoMarkup);
 };

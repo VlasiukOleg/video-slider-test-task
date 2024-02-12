@@ -8,54 +8,34 @@
     <script type="module" src="./index.js"></script>
   </head>
   <body>
-    <div class="swiper">
-      <!-- Additional required wrapper -->
-      <div class="swiper-wrapper"></div>
+    <main>
+      <section class="container">
+        <div class="swiper swiper1">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper"></div>
 
-      <!-- If we need navigation buttons -->
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
 
-      <!-- If we need scrollbar -->
-      <div class="swiper-scrollbar"></div>
-    </div>
+          <!-- <div class="swiper-pagination"></div> -->
 
-    <div class="backdrop js-backdrop">
-      <div class="video-wrapper">
-        <iframe
-          src="https://player.vimeo.com/video/85523671?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=286628"
-          width="600"
-          height="500"
-          frameborder="0"
-          allow="autoplay; fullscreen; picture-in-picture"
-          title="The Sunday Times - Icons"
-        ></iframe>
-      </div>
-    </div>
+          <!-- If we need scrollbar -->
+          <div class="swiper-scrollbar"></div>
+        </div>
+
+        <div class="backdrop js-backdrop">
+          <div class="swiper swiper2 modal-swiper">
+            <div class="swiper-wrapper modal-swiper-wrapper"></div>
+          </div>
+          <div class="swiper-pagination" id="swiper-pagination"></div>
+          <button type="button" class="modal-btn js-close-modal">
+            <svg class="icon" width="15" height="15">
+              <use href="./images/icons.svg#icon-cross"></use>
+            </svg>
+          </button>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
-
-<!-- <div class="gallery">
-      <div class="gallery-wrapper">
-        <div class="gallery-slide">
-          <a href="./images/logo.png"
-            ><img src="./images/logo.png" width="200px" alt="" title=""
-          /></a>
-        </div>
-        <div class="image-sli">
-          <a href="./images/order.jpg"
-            ><img src="./images/order.jpg" width="200px" alt="" title=""
-          /></a>
-        </div>
-        <div class="image-sli">
-          <a href="./images/order1.jpg"
-            ><img src="./images/order1.jpg" width="200px" alt="" title=""
-          /></a>
-        </div>
-        <div class="image-sli">
-          <a href="./images/order2.jpg"
-            ><img src="./images/order2.jpg" width="200px" alt="" title=""
-          /></a>
-        </div>
-      </div>
-    </div> -->
